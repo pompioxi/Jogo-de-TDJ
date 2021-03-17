@@ -1,0 +1,4 @@
+@-personagem
+#-diamantes
+!-pedras
+*-terra
