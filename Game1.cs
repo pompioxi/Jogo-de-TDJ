@@ -8,7 +8,16 @@ namespace trabalho_pratico
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
+        
+        private Texture2D player, dirt, creeper, diamond;
+        private Player steve;
+        
+        private string[] levelNames = {mapas.txt};
+        private char[,] level;
+        private int currentLevel = 0;
+        
+        public const int tileSize = 64;
+        
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -19,6 +28,10 @@ namespace trabalho_pratico
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            LoadLevel(levelNames[currentLevel]);
+            _graphics.PreferredBackBufferHeight = tileSize * (1 + level.GetLength(1));
+            _graphics.PreferredBackBufferWidth = tileSize * level.GetLength(0);
+            _graphics.ApplyChanges();
 
             base.Initialize();
         }
@@ -34,6 +47,18 @@ namespace trabalho_pratico
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+                
+                if (Victory()) {
+                if (currentLevel < levelNames.Length - 1)
+                {
+                    currentLevel++;
+                    Initialize();
+                }
+                else
+                {
+                    isWin = true;
+                }
+            }
 
             // TODO: Add your update logic here
 
@@ -47,6 +72,11 @@ namespace trabalho_pratico
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+        
+        public bool Victory()
+        {
+            //condiçao de vitoria
         }
     }
 }
