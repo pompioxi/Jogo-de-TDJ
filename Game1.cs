@@ -39,7 +39,11 @@ namespace trabalho_pratico
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            
+            diamond = Content.Load<Texture2D>("Diamond_JE3_BE3.png");
+            creeper = Content.Load<Texture2D>("creeper.png");
+            dirt = Content.Load<Texture2D>("texturas-minecraft-terra.jpg");
+            
             // TODO: use this.Content to load your game content here
         }
 
