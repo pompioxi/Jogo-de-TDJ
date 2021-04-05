@@ -1,9 +1,9 @@
 # Jogo-de-TDJ
-Descrição do jogo:
+DESCRIÇÃO DO JOGO:
 O jogo passa-se num mundo de minecraft em que o objetivo é andar com o personagem pela terra a apanhar diamantes
 ao mesmo tempo que se tenta evitar as bigornas para não morrer.
 
-decisões:
+DECISÕES:
 -decidimos por esta de tematica de minecraft pois a mecanica do minecraft envolve muito a parte de minerar vindo 
 dai a ideia desta tematica.
 
